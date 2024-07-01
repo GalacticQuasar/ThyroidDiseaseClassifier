@@ -111,7 +111,7 @@ referral source: WEST, STMW, SVHC, SVI, SVHD, other.
 
 ---
 
-# Presentation:
+# Presentation (Process, Analysis, Comparison):
 ![Slide1](https://github.com/GalacticQuasar/ThyroidDiseaseClassifier/assets/114515524/cbd73cbd-207f-495c-97d7-83e88d412909)
 
 ## **Thyroid Disease Information**
