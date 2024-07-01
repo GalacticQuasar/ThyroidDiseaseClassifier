@@ -117,7 +117,7 @@ referral source: WEST, STMW, SVHC, SVI, SVHD, other.
 ## **Thyroid Disease Information**
 ![Slide2](https://github.com/GalacticQuasar/ThyroidDiseaseClassifier/assets/114515524/f794eb34-68c1-40b6-b4c8-d3d5835b7ee0)
 
-So, first of all, what is the thyroid? The thyroid gland is a small butterfly-shaped organ located in the front of the neck, and its job is to regulate the release of thyroid hormones that control the rate of metabolism in the body. Thyroid disease is a general term for a medical condition that prevents the thyroid gland from correctly regulating its release of hormones. If it's releasing too much thyroid hormone, it's called *hyper*thyroidism. If it's releasing too little, it's called *hypo*thyroidism. Thyroid disease is very common, with around 20 million people in the U.S. having some type of thyroid disorder. Women, in particular, are around 5 to 8 times more likely to be diagnosed with thyroid disease than a man. People over the age of 60 are also more likely to get thyroid disease.
+First, some background information: The thyroid gland is a small butterfly-shaped organ located in the front of the neck, and its job is to regulate the release of thyroid hormones that control the rate of metabolism in the body. Thyroid disease is a general term for a medical condition that prevents the thyroid gland from correctly regulating its release of hormones. If it's releasing too much thyroid hormone, it's called *hyper*thyroidism. If it's releasing too little, it's called *hypo*thyroidism. Thyroid disease is very common, with around 20 million people in the U.S. having some type of thyroid disorder. Women, in particular, are around 5 to 8 times more likely to be diagnosed with thyroid disease than a man. People over the age of 60 are also more likely to get thyroid disease.
 
 ## **Thyroid Disease Database Overview**
 ![Slide3](https://github.com/GalacticQuasar/ThyroidDiseaseClassifier/assets/114515524/adeaf3e0-63c1-4401-a933-fb3f28390769)
@@ -127,7 +127,7 @@ The dataset I used was sourced from the Garvan Institute of Medical Research in 
 ## **Exploratory Data Analysis (Male vs Female Histogram)**
 ![Slide4](https://github.com/GalacticQuasar/ThyroidDiseaseClassifier/assets/114515524/19ad503e-497f-4bad-9c2d-cd411a6cfe74)
 
-So the first thing that I did after importing the dataset was to try and visualize it to see if there were any patterns. This histogram here shows the prevalence of thyroid disease in patients across different age ranges, grouped by sex. You can see that females are much more likely to have some type of thyroid disease across all age ranges. Although both males and females seem to have the highest frequency of thyroid disease around ages 60 to 75, females have another peak at ages 20 to 40. This is most likely because the thyroid plays an important role in the early development of a fetus during pregnancy, as the baby is reliant on the mother's thyroid hormone during the first 3 months of development. So it makes sense that there seems to be a higher frequency of thyroid disease in women between the ages 20 and 40.
+The first thing that I did after importing the dataset was to try and visualize it to see if there were any patterns. This histogram here shows the prevalence of thyroid disease in patients across different age ranges, grouped by sex. You can see that females are much more likely to have some type of thyroid disease across all age ranges. Although both males and females seem to have the highest frequency of thyroid disease around ages 60 to 75, females have another peak at ages 20 to 40. This is most likely because the thyroid plays an important role in the early development of a fetus during pregnancy, as the baby is reliant on the mother's thyroid hormone during the first 3 months of development. So it makes sense that there seems to be a higher frequency of thyroid disease in women between the ages 20 and 40.
 
 ## **Exploratory Data Analysis (Correlation Matrix)**
 ![Slide5](https://github.com/GalacticQuasar/ThyroidDiseaseClassifier/assets/114515524/c2cb74c8-0042-41da-bd0b-d61cca0aea9d)
@@ -137,7 +137,7 @@ The next step that I took in understanding my data was binary encoding all my bo
 ## **Exploratory Data Analysis (Scatterplot)**
 ![Slide6](https://github.com/GalacticQuasar/ThyroidDiseaseClassifier/assets/114515524/27eab92b-c117-4453-835f-1ec301719f81)
 
-So to visualize this correlation, I plotted them in a scatterplot and immediately I noticed the line of instances that show a direct correlation between TT4, which stands for Total Thyroxine, and FTI, which stands for Free Thyroxine Index. After some research, I found out that FTI is actually calculated as TT4 divided by thyroid binding capacity, so that explains why there is such a strong correlation between them in the dataset.​
+To visualize this correlation, I plotted them in a scatterplot and immediately I noticed the line of instances that show a direct correlation between TT4, which stands for Total Thyroxine, and FTI, which stands for Free Thyroxine Index. After some research, I found out that FTI is actually calculated as TT4 divided by thyroid binding capacity, so that explains why there is such a strong correlation between them in the dataset.​
 
 ## **Preprocessing (ft. Common Sense)**
 ![Slide7](https://github.com/GalacticQuasar/ThyroidDiseaseClassifier/assets/114515524/70c11160-b373-4484-add8-e5fc2d021a28)
@@ -192,7 +192,7 @@ I started off with the kNN classifier. First I normalized the scale of all my fe
 ## **Decision Tree Classifier**
 ![Slide15](https://github.com/GalacticQuasar/ThyroidDiseaseClassifier/assets/114515524/7d009c4d-abc5-440a-9af7-42b127e2e0f6)
 
-So to address kNN's weakness I decided to use a Decision Tree Classifier. After defining the splitting criterion as entropy and finding the optimal maximum tree depth through GridSearch Cross Validation, I ended up with an average ROC AUC score of .947 and an average f1 score of .917. I think the decision tree did so much better than kNN because kNN struggles with high dimensionality and categorical data, whereas decision trees are less affected by these problems.
+To address kNN's weakness I decided to use a Decision Tree Classifier. After defining the splitting criterion as entropy and finding the optimal maximum tree depth through GridSearch Cross Validation, I ended up with an average ROC AUC score of .947 and an average f1 score of .917. I think the decision tree did so much better than kNN because kNN struggles with high dimensionality and categorical data, whereas decision trees are less affected by these problems.
 
 ## **Testing and Optimization (Random Forest)**
 ![Slide16](https://github.com/GalacticQuasar/ThyroidDiseaseClassifier/assets/114515524/528e9000-80bb-4a22-873d-4750121fda16)
@@ -212,4 +212,4 @@ The Gradient Tree Boosting classifier performed almost as well as the Random For
 ## **Results**
 ![Slide19](https://github.com/GalacticQuasar/ThyroidDiseaseClassifier/assets/114515524/07ecc65d-bd40-48fd-a91b-2dfffdcb7f6e)
 
-So in the end, Random Forest performed the best out of all the classifiers and Gradient Boosting came in at a close second. You can see the results from my Random Forest classifier on feature importance, and it looks like because the continuous measurements had the most variance it valued them a lot more than the binary attributes. T3 and TSH seem to be the highest ranked, and that makes sense because those two values are commonly tested and looked at by doctors to determine whether a person has thyroid disease or not.
+Ultimately, Random Forest performed the best out of all the classifiers and Gradient Boosting came in at a close second. You can see the results from my Random Forest classifier on feature importance, and it looks like because the continuous measurements had the most variance it valued them a lot more than the binary attributes. T3 and TSH seem to be the highest ranked, and that makes sense because those two values are commonly tested and looked at by doctors to determine whether a person has thyroid disease or not.
