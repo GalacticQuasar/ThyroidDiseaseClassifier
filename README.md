@@ -7,7 +7,7 @@ I completed this project during my internship at [StARLinG Lab](https://starling
 ## **Analysis of Thyroid Disease Database Structure:**
 Thyroid Disease Dataset (form UCI database): https://archive.ics.uci.edu/dataset/102/thyroid+disease
 
-### 6 Original Databases (2800 train - 972 test, same instances but diff classes, 28 attributes: 21 boolean and 7 continuous):
+### 6 Original Databases (2800 train - 972 test, same instances but different classes, 28 attributes: 21 boolean and 7 continuous):
 * allbp.[data, names, test]		- patient has high/low amt of binding protein
     * Classes: increased binding protein, decreased binding protein, negative.
 * allhyper.[data, names, test]	- patient has [a type of] hyperthyroidism
