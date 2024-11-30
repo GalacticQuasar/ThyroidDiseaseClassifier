@@ -2,7 +2,7 @@
 By Akash Ravandhu
 
 This project details my process for data preprocessing, data analysis, training, optimization, and finally comparison of statistical machine learning models in the task of thyroid disease classification, given the results of a thyroid disease test.
-I completed this project during my internship at [StARLinG Lab](https://starling.utdallas.edu/) at the University of Texas at Dallas, and presented my findings to Dr. Sriram Natarajan and Dr. Jey Veerasamy.
+I completed this project during my internship at [StARLinG Lab](https://starling.utdallas.edu/) at the University of Texas at Dallas, and presented my findings to Dr. Sriram Natarajan and Dr. Brian Ricks.
 
 ---
 ## Models/Packages Used
